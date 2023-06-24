@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Portfolio Website</title>
+    <style>
+        /* Reset default browser styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .b1 {
+            width: 100%;
+            min-height: 500vh; /* Adjusted the height to min-height */
+            background-color: black;
+            background-size: cover;
+            overflow: auto; /* Added overflow to enable scrolling */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 100px;
+            margin-left: 850px;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 10px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        nav ul li a:hover {
+            color: #4CC4FC;
+        }
+
+        nav ul li a:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #4CC4FC;
+            transition: .3s;
+            bottom: 0;
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        .project-card {
+            background-color: #181818;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.277);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .project-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            object-fit: cover; /* Added object-fit to ensure the image covers the container */
+            border-radius: 10px; /* Added border-radius to match the container */
+        }
+
+        .project-card .project-info {
+            position: relative;
+            text-align: center;
+        }
+
+        .project-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #4CC4FC;
+            text-align: center; /* Added text-align center to align the title */
+        }
+
+        .project-card p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: justify; /* Added text-align justify to align the description */
+        }
+
+        .project-card .date {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: white;
+        }
+
+        .project-card .button-group {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: auto;
+        }
+
+        .project-card .button-group a {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #4CC4FC;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            margin-right: 8px;
+        }
+
+        .project-card .button-group a:last-child {
+            margin-right: 0;
+        }
+
+        .project-card .button-group a:hover {
+            background-color: #46addc;
+        }
+    </style>
+</head>
+<body>
+    <div class="b1">
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="First Game.png" alt="Project 1">
+                    <div class="project-info">
+                        <h3>First Unity Game</h3>
+                        <p>As the title suggests, this is my first "game" that I have created using the Unity game engine. Hey, it's not that bad, try it yourself!</p>
+                        <div class="button-group">
+                            <a href="Project1.html">More</a>
+                            <a href="https://ffa-team.github.io/first-game/">Play</a>
+                        </div>
+                        <span class="date">May 2023</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="MFS Remake2.png" alt="MFS">
+                    <div class="project-info">
+                        <h3>MFS Remake</h3>
+                        <p>MFS seemed like a pretty cool game so I made it using the google maps tile API and Cesium, now I can fly to anywhere on earth in Unity!
+                        </p>
+                        <div class="button-group">
+                            <a href="Project two.html">More</a>
+                            <a href="project2-demo.html"></a>
+                        </div>
+                        <span class="date">April 2023</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="castle.png" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Project 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis sem quis nisi dapibus facilisis.</p>
+                        <div class="button-group">
+                            <a href="project2-page.html">More</a>
+                            <a href="project2-demo.html">Demo</a>
+                        </div>
+                        <span class="date">April 2023</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="castle.png" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Project 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis sem quis nisi dapibus facilisis.</p>
+                        <div class="button-group">
+                            <a href="project2-page.html">More</a>
+                            <a href="project2-demo.html">Demo</a>
+                        </div>
+                        <span class="date">April 2023</span>
+                    </div>
+                </div>
+
+                <!-- Add more project cards as needed -->
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

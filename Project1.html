@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    html, body {
+      margin: 0; /* Add this line to remove margin */
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 100px;
+      background-color: transparent; /* Set the navigation bar background to transparent */
+      margin-left: 850px;
+    }
+
+    nav ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 10px 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      position: relative;
+      padding: 5px 0;
+    }
+
+    nav ul li a:hover {
+      color: #4CC4FC;
+    }
+
+    nav ul li a:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: #4CC4FC;
+      transition: .3s;
+      bottom: 0;
+    }
+
+    nav ul li a:hover:after {
+      width: 100%;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      position: relative;
+      height: 100vh;
+      background-image: url('First Game.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-bottom: -50px; 
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .header-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      width: 100%; 
+      padding: 0 20px; 
+      box-sizing: border-box; 
+    }
+
+    .header-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .header-content p {
+      font-size: 18px;
+    }
+    .paragraph-section {
+      background-color: black;
+      margin-top: 20px;
+      padding: 20px;
+      color: white;
+    }
+
+    .content-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      height: calc(100vh - 150px);
+    }
+
+    .text-wrapper {
+      flex: 1;
+      max-width: 500px;
+    }
+    .text-wrapper p{
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    .text-wrapper h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .image-wrapper img {
+      max-width: 550px;
+      max-height: 550px;
+    }
+
+    .scroll-down-arrow {
+      position: absolute;
+      bottom: 30px; /* Adjust the position as desired */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .scroll-down-arrow span {
+      display: block;
+      width: 24px;
+      height: 24px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: rotate(45deg);
+      margin: 0 auto;
+      animation: scrollDown 1s infinite;
+    }
+
+
+    @keyframes scrollDown {
+  0% {
+    opacity: 1;
+    transform: rotate(45deg) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+  }
+  
+}
+
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-content">
+      <h1>My First Unity Game</h1>
+      <p>The starting point for my game developing journey.</p>
+    </div>
+    <div class="scroll-down-arrow">
+      <span></span>
+    </div>
+  </header>
+  <div class="paragraph-section">
+    <div class="content-wrapper">
+      <div class="image-wrapper">
+        <img src="First Game 2.png" alt="Image">
+      </div>
+      <div class="text-wrapper">
+        <h2>My First Unity Game</h2>
+        <p>
+          My first Unity game was an interesting challenge for me because, well, it was my first time touching Unity. The gameplay involved players navigating through various obstacles to reach a portal. The development process was made easier by following a well-made YouTube tutorial by Jonas Tyroller (https://www.youtube.com/@JonasTyroller).
+          The game features moving platforms, narrow paths, and treacherous gaps. Creating this game ignited my passion for game development, and I realized that with some time and effort, I could create some great games.
+        </p>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var arrow = document.querySelector('.scroll-down-arrow');
+      arrow.addEventListener('click', function() {
+        window.scrollBy({
+          top: window.innerHeight,
+          left: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
